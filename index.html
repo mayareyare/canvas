@@ -8,32 +8,24 @@
 
   <script src="https://cdn.jsdelivr.net/npm/gif.js@0.2.0/dist/gif.min.js"></script>
 
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Cairo', Arial, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 20px;
+      direction: rtl;
     }
     canvas {
       border: 1px solid #000;
       margin: 10px;
       cursor: crosshair;
     }
-    /* 
-    button {
-      padding: 10px 20px;
-      background-color: #FF9A22;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      margin-top: 20px;
-    }
-    button:hover {
-      background-color: #866CF4;
-    } */
+
+
      body {
   background: #ffffff;
   font-family: 'Cairo', Arial, sans-serif; /* Arabic-friendly font */
@@ -41,22 +33,6 @@
   color: #333;
   direction: rtl; /* For Arabic text */
 }
-
-/* pen {
-  fill: none;
-  stroke: #000;
-  stroke-width: 2px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-scribble {
-  fill: none;
-  stroke: #000;
-  stroke-width: 1px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-} */
 
 button {
   background-color: #FF9838; /* Updated to match the orange in the image */
@@ -76,9 +52,7 @@ button:hover {
 }
 
 .container {
-  /* background-color: #b0e49f; */
   max-width: 1200px;
-  /* max-height: max-content; */
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
@@ -96,13 +70,13 @@ canvas {
   </style>
 </head>
 <body>
-  <h2>Free Sketches</h2>
+  <h1>روسم</h1>
   <p>Sketch freely on the canvases and click "Generate GIF" to save your sketches as a GIF.</p>
   
   <div class="container" style="display: flex; align-items: flex-start;">
     <div style="text-align: center;">
-      <h3>Select Pen Color</h3>
-      <div id="colorPicker" style="display: flex; flex-direction: column; gap: 10px;">
+      <!-- <h3>Select Pen Color</h3> -->
+      <div id="colorPicker" style="display: flex; flex-direction: column; gap: 10px; padding-top: 150px;">
         <button style="background-color: #f6f6f6; width: 30px; height: 30px; border: none; cursor: pointer;" data-color="#f6f6f6"></button>
         <button style="background-color: #b0e49f; width: 30px; height: 30px; border: none; cursor: pointer;" data-color="#b0e49f"></button>
         <button style="background-color: #FF9A22; width: 30px; height: 30px; border: none; cursor: pointer;" data-color="#FF9A22"></button>
@@ -113,32 +87,22 @@ canvas {
     <div>
       <div style="display: flex; gap: 20px; align-items: center;">
         <div style="text-align: center;">
-          <h3>Sketch 1</h3>
+          <h3>الرسمة الأولى</h3>
           <canvas id="canvas1" width="350" height="350"></canvas>
         </div>
         <div style="text-align: center;">
-          <h3>Sketch 2</h3>
+          <h3>الرسمة الثانية</h3>
           <canvas id="canvas2" width="350" height="350"></canvas>
         </div>
         <div style="text-align: center;">
-          <h3>Sketch 3</h3>
+          <h3>الرسمة الثالثة</h3>
           <canvas id="canvas3" width="350" height="350"></canvas>
         </div>
       </div>
     </div>
-    <!-- <div style="margin-right: 20px; text-align: center;">
-      <h3>Select Pen Color</h3>
-      <div id="colorPicker" style="display: flex; flex-direction: column; gap: 10px;">
-        <button style="background-color: #f6f6f6; width: 30px; height: 30px; border: none; cursor: pointer;" data-color="#f6f6f6"></button>
-        <button style="background-color: #b0e49f; width: 30px; height: 30px; border: none; cursor: pointer;" data-color="#b0e49f"></button>
-        <button style="background-color: #FF9A22; width: 30px; height: 30px; border: none; cursor: pointer;" data-color="#FF9A22"></button>
-        <button style="background-color: #876BF5; width: 30px; height: 30px; border: none; cursor: pointer;" data-color="#876BF5"></button>
-        <button style="background-color: #636363; width: 30px; height: 30px; border: none; cursor: pointer;" data-color="#636363"></button>
-      </div>
-    </div> -->
   </div>
 
-  <div style="margin-top: 20px; text-align: center;">    
+  <div style="margin-top: 50px; text-align: center;">    
     <button id="generateGifBtn">Generate GIF</button>
   </div>
 
