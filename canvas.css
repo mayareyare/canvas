@@ -1,0 +1,56 @@
+body {
+  background: #ffffff;
+  font-family: 'Cairo', Arial, sans-serif; /* Arabic-friendly font */
+  font-size: 16px;
+  color: #333;
+  direction: rtl; /* For Arabic text */
+}
+
+.pen {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.scribble {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.button {
+  background-color: #FF9838; /* Updated to match the orange in the image */
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px; /* More rounded corners like in the image */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: #FF8820;
+  transform: translateY(-2px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  align-items: center;
+}
+
+.canvas {
+  border: none; /* Remove border as per design */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow instead */
+  border-radius: 8px;
+}
